@@ -16,7 +16,11 @@ const App = () => {
         <Routes>
           <Route path="/login" element={<Login />} />
           
-          <Route element={<RequireAuth><AppLayout /></RequireAuth>}>
+          <Route element={
+            <RequireAuth>
+              <AppLayout />
+            </RequireAuth>
+          }>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/epis" element={<EPIs />} />
             <Route path="/estoque" element={<Estoque />} />
